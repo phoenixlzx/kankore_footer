@@ -141,9 +141,11 @@
 
             // 如果没有移动过鼠标说明是单击，打开商品链接并隐藏动画
             if( !mouse_move_flag ) {
+                /*
                 stop();
                 var url = kan.attr('href');
                 window.open(url, '_blank');
+                */
             } else {
                 // 有移动则是鼠标拖拽事件
                 kan.removeClass('dragging').addClass('dropping');
