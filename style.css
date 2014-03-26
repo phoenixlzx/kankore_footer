@@ -1,0 +1,131 @@
+.kankore-bath .water {
+    height: 50px;
+    background: url("img/kankore-bath-water.png") repeat-x bottom;
+    z-index: 105;
+    position: fixed;
+    bottom: -1px;
+    width: 100%;
+    opacity: .8;
+    left: 0;
+    -webkit-animation: waves-r2l 10s linear infinite;
+    -moz-animation: waves-r2l 10s linear infinite;
+    -ms-animation: waves-r2l 10s linear infinite;
+    -o-animation: waves-r2l 10s linear infinite;
+    animation: waves-r2l 10s linear infinite
+}
+
+.kankore-bath .copyright {
+    position: relative;
+    top: 30px;
+    left: 5px;
+    color: #fff;
+    font-size: 80%;
+    opacity: .8
+}
+
+.kankore-bath .kan {
+    cursor: pointer;
+    position: fixed;
+    top: 999px;
+    left: -20px;
+    display: none;
+    z-index: 99
+}
+
+.kankore-bath .kan.floating {
+    -webkit-transition: left 1s linear, top 1s linear, -webkit-transform 1.5s ease !important;
+    -moz-transition: left 1s linear, top 1s linear, -moz-transform 1.5s ease !important;
+    -ms-transition: left 1s linear, top 1s linear, -ms-transform 1.5s ease !important;
+    -o-transition: left 1s linear, top 1s linear, -o-transform 1.5s ease !important;
+    transition: left 1s linear, top 1s linear, transform 1.5s ease !important
+}
+
+.kankore-bath .kan.dragging {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+    -webkit-animation: kan-swing .8s linear infinite;
+    -moz-animation: kan-swing .8s linear infinite;
+    -ms-animation: kan-swing .8s linear infinite;
+    -o-animation: kan-swing .8s linear infinite;
+    animation: kan-swing .8s linear infinite
+}
+
+.kankore-bath .kan.dropping {
+    -webkit-transition: top .8s cubic-bezier(.795, .21, .535, 1.235) !important;
+    -moz-transition: top .8s cubic-bezier(.795, .21, .535, 1.235) !important;
+    -ms-transition: top .8s cubic-bezier(.795, .21, .535, 1.235) -!important;
+    -o-transition: top .8s cubic-bezier(.795, .21, .535, 1.235) !important;
+    transition: top .8s cubic-bezier(.795, .21, .535, 1.235) !important
+}
+
+.kankore-bath .kan img {
+    opacity: 1 !important;
+    outline: none;
+    pointer-events: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none
+}
+
+@-webkit-keyframes waves-r2l {
+    0% {
+        background-position: 0 0
+    }
+    100% {
+        background-position: -552px 0
+    }
+}
+
+@keyframes waves-r2l {
+    0% {
+        background-position: 0 0
+    }
+    100% {
+        background-position: -552px 0
+    }
+}
+
+@-webkit-keyframes waves-l2r {
+    0% {
+        background-position: 0 0
+    }
+    100% {
+        background-position: 552px 0
+    }
+}
+
+@keyframes waves-l2r {
+    0% {
+        background-position: 0 0
+    }
+    100% {
+        background-position: 552px 0
+    }
+}
+
+@-webkit-keyframes kan-swing {
+    0% {
+        -webkit-transform: rotate(1deg)
+    }
+    50% {
+        -webkit-transform: rotate(-2deg)
+    }
+    100% {
+        -webkit-transform: rotate(1deg)
+    }
+}
+
+@keyframes kan-swing {
+    0% {
+        transform: rotate(1deg)
+    }
+    50% {
+        transform: rotate(-2deg)
+    }
+    100% {
+        transform: rotate(1deg)
+    }
+}
